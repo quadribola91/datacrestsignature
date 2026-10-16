@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, Copy, Download, Mail, Phone, RotateCcw, UserRound, Globe2, MapPin, BriefcaseBusiness } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,7 +36,9 @@ const fields: { key: FieldKey; label: string; placeholder: string; icon: typeof 
 function SignatureStudio() {
   const [details, setDetails] = useState<SignatureDetails>(CEO_SIGNATURE);
   const [copied, setCopied] = useState(false);
-  const html = signatureHtml(details, new URL(datacrestBanner.url, window.location.origin).href);
+  const [appOrigin, setAppOrigin] = useState("https://datacrestgroup.com");
+  useEffect(() => setAppOrigin(window.location.origin), []);
+  const html = signatureHtml(details, new URL(datacrestBanner.url, appOrigin).href);
 
   const updateField = (key: FieldKey, value: string) => {
     setDetails((current) => ({ ...current, [key]: value }));
