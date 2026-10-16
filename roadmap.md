@@ -1,0 +1,3 @@
+- [ ] Build a Datacrest-branded signature editor with a live preview.
+- [ ] Support copying and downloading the email-ready signature.
+- [ ] Verify desktop/mobile layout, browser interaction, and route metadata.
