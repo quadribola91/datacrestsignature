@@ -5,6 +5,7 @@ import { Check, Copy, Download, Mail, Phone, UserRound, BriefcaseBusiness, Image
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import datacrestBanner from "@/assets/datacrest-signature-banner.png.asset.json";
 import { DEFAULT_SIGNATURE, FIXED_COMPANY_DETAILS, SPACING_PRESETS, signatureHtml, validateSignatureDetails, type SignatureDetails, type SpacingPreset } from "@/lib/signature";
 
@@ -165,7 +166,7 @@ function SignatureStudio() {
               </div>
               <div className="sm:col-span-2 lg:col-span-1 xl:col-span-2">
                 <Label htmlFor="address" className="mb-2 block text-xs font-semibold text-foreground">Office address</Label>
-                <Input id="address" value={FIXED_COMPANY_DETAILS.address} readOnly aria-readonly="true" />
+                <Textarea id="address" value={FIXED_COMPANY_DETAILS.address} readOnly aria-readonly="true" rows={2} className="min-h-16 resize-none text-sm" />
               </div>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
