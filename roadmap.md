@@ -1,3 +1,3 @@
 - [x] Add compact, balanced, and relaxed spacing; PNG download; fixed company website and address; and Datacrest-only email validation.
 - [x] Remove CEO personal details from all defaults and placeholders.
-- [ ] Verify the editor, email HTML/PNG exports, spacing, and required-field/domain validation.
+- [x] Verify the editor, PNG export, spacing, and required-field/domain validation.
