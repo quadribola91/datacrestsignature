@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import datacrestBanner from "@/assets/datacrest-signature-banner.png.asset.json";
+import datacrestLogo from "@/assets/datacrest-logo.png.asset.json";
 import { DEFAULT_SIGNATURE, FIXED_COMPANY_DETAILS, SPACING_PRESETS, signatureHtml, validateSignatureDetails, type SignatureDetails, type SpacingPreset } from "@/lib/signature";
 
 export const Route = createFileRoute("/")({
@@ -118,9 +119,7 @@ function SignatureStudio() {
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary text-primary-foreground">
-              <span className="text-lg font-bold tracking-normal">D</span>
-            </div>
+            <img src={datacrestLogo.url} alt="Datacrest logo" className="h-10 w-auto" />
             <div>
               <p className="text-sm font-bold tracking-normal text-foreground">DATACREST</p>
               <p className="text-[10px] font-medium tracking-normal text-muted-foreground">SIGNATURE STUDIO</p>
