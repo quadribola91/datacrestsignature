@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import datacrestBanner from "@/assets/datacrest-signature-banner.png.asset.json";
-import datacrestLogo from "@/assets/datacrest-logo.png.asset.json";
+import datacrestBanner from "@/assets/datacrest-signature-banner.png";
+import datacrestLogo from "@/assets/datacrest-logo.png";
 import { DEFAULT_SIGNATURE, FIXED_COMPANY_DETAILS, SPACING_PRESETS, signatureHtml, validateSignatureDetails, type SignatureDetails, type SpacingPreset } from "@/lib/signature";
 
 export const Route = createFileRoute("/")({
@@ -42,7 +42,7 @@ function SignatureStudio() {
   const previewRef = useRef<HTMLDivElement>(null);
   const [appOrigin, setAppOrigin] = useState("https://datacrestgroup.com");
   useEffect(() => setAppOrigin(window.location.origin), []);
-  const html = signatureHtml(details, new URL(datacrestBanner.url, appOrigin).href, spacing);
+  const html = signatureHtml(details, new URL(datacrestBanner, appOrigin).href, spacing);
 
   const updateField = (key: FieldKey, value: string) => {
     setDetails((current) => ({ ...current, [key]: value, website: FIXED_COMPANY_DETAILS.website, address: FIXED_COMPANY_DETAILS.address }));
