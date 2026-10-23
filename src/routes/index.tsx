@@ -119,7 +119,7 @@ function SignatureStudio() {
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8">
           <div className="flex items-center gap-3">
-            <img src={datacrestLogo.url} alt="Datacrest logo" className="h-10 w-auto" />
+            <img src={datacrestLogo} alt="Datacrest logo" className="h-10 w-auto" />
             <div>
               <p className="text-sm font-bold tracking-normal text-foreground">DATACREST</p>
               <p className="text-[10px] font-medium tracking-normal text-muted-foreground">SIGNATURE STUDIO</p>
